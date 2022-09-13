@@ -1,41 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --main-color: #0f171e;
-  --assistant-color: #1a242e;
-  --white:#fff;
-  --ıceBlue:#79b8f3;
-  --overview:#566b84;
+    --main-color: #0f171e;
+    --assistant-color: #1a242e;
+    --white: #fff;
+    --ıceBlue: #79b8f3;
+    --overview: #566b84;
+    --footercolor:#2066a0;
+    --footersmall:#8197a4;
 
-  --placeholder:#6c757d;
-  --boxshadow:0 5px 6px rgb(0, 0, 0, 0.25);
+
+    --placeholder: #6c757d;
+    --boxshadow: 0 5px 6px rgb(0, 0, 0, 0.25);
 }
 
 body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--main-color);
-  }
-  
-  header {
+}
+
+header {
     background-color: var(--assistant-color);
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     letter-spacing: 5px;
     color: #fff;
-  }
-  
-  .search {
+}
+
+.search {
     background-color: var(--main-color);
     border: 0;
     border-radius: 1rem;
@@ -46,69 +49,69 @@ body {
     margin-left: 0.5rem;
     width: 100%;
     transition: transform 0.3s ease-in;
-  }
-  
-  .search:focus {
+}
+
+.search:focus {
     outline: none;
     transform: scale(1.025);
-  }
-  
-  .search::placeholder {
+}
+
+.search::placeholder {
     color: #6c757d;
-  }
-  
-  main {
+}
+
+main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  }
-  
-  .movie {
+}
+
+.movie {
     width: 300px;
     margin: 1rem;
     background-color: var(--assistant-color);
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--boxshadow);
     position: relative;
     overflow: hidden;
     border-radius: 3px;
-  }
-  
-  .movie img {
+}
+
+.movie img {
     width: 100%;
-  }
-  
-  .movie-info {
-    color: #79b8f3;
+}
+
+.movie-info {
+    color: var(--ıceBlue);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem 1rem;
     letter-spacing: 0.5px;
-  }
-  
-  .movie-info span {
+}
+
+.movie-info span {
     background-color: var(--main-color);
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
     font-size: 90%;
     font-weight: bold;
-  }
-  
-  .movie-info span.green {
+}
+
+.movie-info span.green {
     color: lightgreen;
-  }
-  
-  .movie-info span.orange {
+}
+
+.movie-info span.orange {
     color: lightsalmon;
-  }
-  
-  .movie-info span.red {
+}
+
+.movie-info span.red {
     color: lightcoral;
-  }
-  
-  .overview {
-    background-color: #566b84;
-    color: #111;
+}
+
+.overview {
+    background-color:var(--overview);
+    color: var(--white);
     padding: 2rem;
     position: absolute;
     left: 0;
@@ -118,15 +121,49 @@ body {
     transform: translateY(101%);
     overflow-y: auto;
     transition: transform 0.5s ease-in;
-  }
-  
-  .overview h3 {
+}
+
+.overview h3 {
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid #79b8f3;
+    border-bottom: 2px solid var(--ıceBlue);
     width: 50%;
-  }
-  
-  .movie:hover .overview {
+}
+
+.movie:hover .overview {
     transform: translateY(0);
-  }
-  
+}
+
+
+footer {
+    background-color: var(--assistant-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+ 
+}
+
+footer h3 {
+    letter-spacing: 5px;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 1rem;
+}
+
+footer ul li a {
+    color:var(--footercolor) ;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer small {
+    margin-top: 1.5rem;
+    color: var(--footersmall);
+    font-size: 0.8rem;
+}
