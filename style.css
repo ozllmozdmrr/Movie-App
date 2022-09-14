@@ -31,11 +31,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 header h1 {
     letter-spacing: 5px;
     color: #fff;
+   
 }
 
 .search {
