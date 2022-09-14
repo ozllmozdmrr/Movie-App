@@ -8,3 +8,15 @@ const SEARCH_API =
 
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const main = document.getElementById("main");
+
+
+getMovies(API_URL)
+
+async function getMovies(url) {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    // console.log(data.results);
+
+}
